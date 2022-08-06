@@ -15,8 +15,3 @@ function Home() {
 
 export default Home;
 
-////<Header />
-
-///<Cards/>
-
-//<Footer/>

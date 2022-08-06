@@ -7,8 +7,16 @@ const SocialMedia = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet
+    background-color: #2d0f63;
+    height: 90px;
 
+    p{
+        color: #879ae0;
+        font-weight: bold;
+        display: flex;
+        
+
+    }
 
 `
 
@@ -28,6 +36,7 @@ function Footer() {
 
          <SocialMedia>
             <p>Agende sua viagem conosco!</p>
+            <br></br>
             <SocialMediaIcons src={"/Img/facebookIcon.png"} alt="Facebook" />
             <SocialMediaIcons src={'/Img/InstagramIcon.png'} alt="Instagram" />
             <SocialMediaIcons src={'/Img/twitterIcon.png'} alt="Twitter" />

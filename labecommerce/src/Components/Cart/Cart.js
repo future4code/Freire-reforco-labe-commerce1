@@ -15,17 +15,17 @@ function Cart(props) {
     return (
       <Item
       name={item.name}
-      quantidade={props.quantidade}
+      price={props.price}
       />
     )
   })
-  
+
   return (
     <div>
       <CartStyled>
-        Carrinho:
+        Carrinho -
         {cartItem} 
-        Total: R$ 0,00
+        Total: R$ {props.price}
       </CartStyled>
     </div>
   );

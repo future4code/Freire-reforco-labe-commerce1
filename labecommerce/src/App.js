@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import Cards from "./Components/Cards/Cards";
-import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
-import Cart from "./Components/Cart/Cart"
+import Cart from "./Components/Cart/Cart";
 
 
 function App() {
   const [cardList, setCardList ] = useState([
     {
       id: 1,
-      name: "Planeta Vermelho - Marte",
+      name: "Marte",
       price: 2000000,
-      description: " Marte, o quarto planeta no sistema solar, guarda mistérios que pouco a pouco vão sendo revelados",
-      image: "Freire-reforco-labe-commerce1/labecommerce/public/Img/mars.jpg"
+      description: " Marte, o Planeta Vermelho.",
+      image: "./Img/mars.jpg"
   
   },
   {
@@ -21,7 +20,7 @@ function App() {
       name: "Vênus",
       price: 3000000,
       description: "Vênus é o mais quente do Sistema Solar e um dos mais brilhantes do céu, perdendo apenas para a Lua.",
-      image: "Freire-reforco-labe-commerce1/labecommerce/public/Img/venus.jpg"
+      image: "./Img/venus.jpg"
   },
 
   {
@@ -29,7 +28,7 @@ function App() {
     name: "Lua",
     price: 500000,
     description: "Que tal conhecer o satélite natural da Terra?",
-    image: "Freire-reforco-labe-commerce1/labecommerce/public/Img/moon.jpg"
+    image: "./Img/moon.jpg"
   },
 
   {
@@ -37,9 +36,25 @@ function App() {
     name: "Saturno",
     price: 7000000,
     description: "O planeta com o maior número de luas do Sistema Solar",
-    image: "Freire-reforco-labe-commerce1/labecommerce/public/Img/saturn.jpg"
+    image: "./Img/saturn.jpg"
   },
   
+  {
+    id: 5,
+    name: "Netuno",
+    price: 8000000,
+    description: "Se prepare para encarar temperaturas extremamente baixas e pouca luminosidade.",
+    image: "./Img/neptune.jpg"
+  },
+
+  {
+    id: 6,
+    name: "Júpiter",
+    price: 6000000,
+    description: "O gigante gasoso.",
+    image: "./Img/jupiter.jpg"
+  },
+
   ]);
 
 
@@ -64,8 +79,7 @@ function App() {
     return (
     <Cards 
       card={item}
-      addToCart={addToCart}
-    
+      addToCart={addToCart}    
     />
 
   )})
@@ -77,7 +91,8 @@ function App() {
   return (
     <div>
       <Header/>
-      <Home/>
+     
+    
 
       {card}
       <br></br>

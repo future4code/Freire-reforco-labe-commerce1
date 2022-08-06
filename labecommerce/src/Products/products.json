@@ -1,0 +1,32 @@
+[
+  {
+    "imagem": "https://picsum.photos/seed/e/200",
+    "nome": "Produto1",
+    "valor": "100,00"
+  },
+  {
+    "imagem": "https://picsum.photos/seed/e/200",
+    "nome": "Produto2",
+    "valor": "100,00"
+  },
+  {
+    "imagem": "https://picsum.photos/seed/e/200",
+    "nome": "Produto3",
+    "valor": "100,00"
+  },
+  {
+    "imagem": "https://picsum.photos/seed/e/200",
+    "nome": "Produto4",
+    "valor": "100,00"
+  },
+  {
+    "imagem": "https://picsum.photos/seed/e/200",
+    "nome": "Produto5",
+    "valor": "100,00"
+  },
+  {
+    "imagem": "https://picsum.photos/seed/e/200",
+    "nome": "Produto6",
+    "valor": "100,00"
+  }
+]

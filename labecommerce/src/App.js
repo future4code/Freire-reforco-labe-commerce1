@@ -57,14 +57,12 @@ function App() {
 
   ]);
 
+// -- Filtros e Ordenação -- //
+  const [totalValue, setTotalValue] = (0);
+  const [minValue, setMinValue] = useState([500000]) 
+  const [maxValue, setMaxValue] = useState([8000000]) 
 
-  //const [cart, setCart] = useState([]);
-  //const [totalValue, setTotalValue] = (0);
-  //const [minValue, setMinValue] = useState([]) //inserir valor minimo dentro do ()
-  //const [maxValue, setMaxValue] = useState() // inserir valor máximo dentro do ()
 
-  //const json = JSON.stringify(card);
-  //localStorage.setItem("Cards", json);
 
   const [cart, setCart] = useState([]);
   //const [totalValue, setTotalValue] = (0);

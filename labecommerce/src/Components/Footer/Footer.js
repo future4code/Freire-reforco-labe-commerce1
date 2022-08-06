@@ -13,7 +13,7 @@ const SocialMedia = styled.div`
     p{
         color: #879ae0;
         font-weight: bold;
-        display: flex;
+        
         
 
     }

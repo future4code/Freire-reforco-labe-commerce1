@@ -5,7 +5,6 @@ const DivCard = styled.div`
   padding: 30px;
   margin: 30px;
   display: flex;
-  //justify-content: center;
   flex-direction: column;
   column-gap: 30px;
   
@@ -21,10 +20,6 @@ const DivCard = styled.div`
   font-weight: bold;
   transition: all 0.35s ease-in-out;
 
-
-
-
-  
   img {
     height: 265px;
     background-color: grey;
@@ -53,12 +48,10 @@ const PhotoCard = styled.img`
   padding: 20px;
   height: 150px;
   width: 260px;
-
 `
 
 
 function Cards (props) {
-
 
   return (
   <div>
@@ -68,13 +61,8 @@ function Cards (props) {
       <p>{props.card.price}</p>
       <p>{props.card.description}</p>
 
-
       <button onClick={() => props.addToCart(props.card)}>Comprar</button>
     </DivCard>
-
-
-
-
   </div>
   )
 }

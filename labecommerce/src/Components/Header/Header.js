@@ -59,7 +59,7 @@ function Header() {
     <HeaderContainer>
       <Logo src={"./Img/logo3.png"}/>
       <Title>SpaceX</Title>
-      <strong>A maior empresa de viagens espaciais </strong> 
+      <strong> </strong> 
       <br></br>
 
       

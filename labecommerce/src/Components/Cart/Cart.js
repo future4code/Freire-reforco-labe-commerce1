@@ -3,10 +3,14 @@ import styled from "styled-components"
 import Item from "./Item";
 
 const CartStyled = styled.div`
-  border: 1px solid black;
+  border: 1px solid #a9bdeb;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: #a9bdeb;
 `
 
 function Cart(props) {

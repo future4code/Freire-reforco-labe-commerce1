@@ -1,44 +1,95 @@
-import React from "react";
-////import Header from "./Components/Header/Header";
+import React, {useState} from "react";
+import styled from "styled-components";
 
-//import Footer from "../Footer/Footer";
+const FilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8px;
+  font-size: 1rem;
 
+`
+const InputQuery= styled.button`
+  width: 100%;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid var(--color-gray-4);
+  
+
+`
+const InputMinMax= styled.button`
+  width: 100%;
+  border: 1px solid var(--color-gray-4);
+  border-radius: 6px;
+  font-size: 1rem;
+  
+
+`
+const InputOrd= styled.button`
+  width: 10%;
+  border: 1px solid var(--color-gray-4);
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  justify-content: center;
+
+    option{ 
+      font-size: 1.3rem;
+      color: #2d0f63;
+    }
+    select{ 
+      font-size: 1.2rem;
+      color: #2d0f63;
+      border-radius: 8px;
+    }
+
+`
 
 function Filter(props) {
-  // const [dados, setDados] = useState(cards)
-  // const [minValue, setMinValue] = useState([])
-  // const [maxValue, setMaxValue] = useState([])
-  // const [findName, setFindNaame] = useState("")
 
-  const filterResult = 
+   const [minValue, setMinValue] = useState([])
+   const [maxValue, setMaxValue] = useState([])
+   const [ord, setOrd] = useState("");
+
 
   return (
     <FilterContainer>
     <div>
-      <InputFind
+      <InputQuery
         type="text"
-        placeholder="Buscar por Nome"
-        value={props.findName}
-        onChange={props.onChangeFindName}
+        placeholder="Pesquisa"
+        value={props.query}
+        onChange={(event) =>{props.setQuery(event.target.value)}}
       />
 
       <InputMinMax
         type="number"
         placeholder="Preço Mínimo"
         value={props.minValue}
-        onChange={props.onChangeMinValue}
+        onChange={(event) => {props.setMinValue(event.target.value)}}
       />
 
       <InputMinMax
         type="number"
         placeholder="Preço Máximo"
         value={props.maxValue}
-        onChange={props.onChangeMaxValue}
+        onChange={(event) => {props.setMaxValue(event.target.value)}}
       />
       
 
     </div>
+    <InputOrd>
+      <label></label>
+      <select onChange={(event) => {props.setOrd(event.target.value)}}>
+        <option>Ordenação</option>
+        <option value={"Menor Preço"}>Menor Preço</option>
+        <option value={"Maior Preço"}>Maior Preço</option>
+      </select>
+
+    </InputOrd>
     </FilterContainer>
+    
   );
 }
 

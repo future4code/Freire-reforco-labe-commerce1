@@ -12,20 +12,16 @@ const SocialMedia = styled.div`
 
     p{
         color: #879ae0;
-        font-weight: bold;
-        
-        
-
+        font-weight: bolder;
+        font-size: larger;
     }
-
 `
 
 const SocialMediaIcons = styled.img`
-    border: 1px solid black;
+    border: 1px solid  #2d0f63;
     height: 5vh;
-    margin: 5px;
+    margin: 10px;
     
-
 `
 
 
@@ -36,7 +32,6 @@ function Footer() {
 
          <SocialMedia>
             <p>Agende sua viagem conosco!</p>
-            <br></br>
             <SocialMediaIcons src={"/Img/facebookIcon.png"} alt="Facebook" />
             <SocialMediaIcons src={'/Img/InstagramIcon.png'} alt="Instagram" />
             <SocialMediaIcons src={'/Img/twitterIcon.png'} alt="Twitter" />

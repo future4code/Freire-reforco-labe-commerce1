@@ -3,10 +3,12 @@ import Cards from "./Components/Cards/Cards";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Cart from "./Components/Cart/Cart";
+import Filter from "./Components/Filter/Filter";
+
 
 
 function App() {
-  const [cardList, setCardList ] = useState([
+  const [cardList, setCardList] = useState([
     {
       id: 1,
       name: "Marte",
@@ -57,15 +59,15 @@ function App() {
 
   ]);
 
-// -- Filtros e Ordenação -- //
-  const [totalValue, setTotalValue] = (0);
-  const [minValue, setMinValue] = useState([500000]) 
-  const [maxValue, setMaxValue] = useState([8000000]) 
+// -- Filtros -- //
+  //const [minValue, setMinValue] = useState([500000]) 
+  //const [maxValue, setMaxValue] = useState([8000000]) 
+  const [query, setQuery] = useState("")
 
-
-
-  const [cart, setCart] = useState([]);
+  //---- Estados para o Carrinho ---- //
   //const [totalValue, setTotalValue] = (0);
+  const [cart, setCart] = useState([]);
+
 
   //Função para adicionar o item(viagem) ao carrinho:
   const addToCart = (card) => {
@@ -79,22 +81,39 @@ function App() {
       card={item}
       addToCart={addToCart}    
     />
-
   )})
 
-
-
- 
 
   return (
     <div>
       <Header/>
      
-    
+      <Filter
+      query={query}
+      setQuery={setQuery}
+
+      
+        // {/* // {card.map((cardList) => {
+        // //   return cardList.title.includes(query) || cardList.description.includes(query)
+        // // }) */}
+        // {cardList.map((card)=> {
+        // return <Cards key={card.id} cardList={card} />
+        // })}
+
+       
+      // {/* // minimo={minValue}
+      // // maximo={maxValue}
+      
+      // // onChangeMinValue={onChangeMinValue}
+      // // onChangeMaxValue={onChangeMaxValue}
+      // // onChangeQuery={onChangeQuery}
+      // // onChangeOrd={onChangeOrd} */}
+       />
+
 
       {card}
       <br></br>
-      <Cart>cart={cart}</Cart>
+      <Cart cart={cart}></Cart>
 
       <Footer/>
 
